@@ -27,6 +27,8 @@ namespace WindowsFormsApp2
             };
             button1.MouseEnter += (s, a) => { Process.Start("notepad"); };
             button1.MouseLeave += (s, a) => { foreach (Process process in Process.GetProcessesByName("notepad")) process.Kill(); };
+
+            button2.Click += (s, a) => { label1.Text = "Eva"; };
         }
 
         void Cmd(string line)
